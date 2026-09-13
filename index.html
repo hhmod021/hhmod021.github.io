@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="محفظة تطبيقات الهاتف المحمول - تحميل التطبيقات من Google Play">
+    <meta name="theme-color" content="#0f0f1e">
+    <title>محفظتي - تطبيقات الهاتف المحمول</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0f0f1e;
+            --bg-secondary: #1a1a2e;
+            --bg-tertiary: #16213e;
+            --glass-light: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0c3;
+            --accent: #00d4ff;
+            --accent-hover: #00a8cc;
+            --success: #10b981;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Tajawal', 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-attachment: fixed;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 15, 30, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1rem 2rem;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent) 0%, #0099ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Header */
+        header {
+            margin-top: 80px;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Apps Section */
+        .apps-section {
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .app-card {
+            background: var(--glass-light);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .app-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--accent);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--accent) 0%, #0099ff 100%);
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .app-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .app-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, var(--accent) 0%, #0099ff 100%);
+            color: var(--bg-primary);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.2);
+        }
+
+        .download-btn:hover {
+            background: linear-gradient(135deg, var(--accent-hover) 0%, #0077aa 100%);
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.3);
+        }
+
+        .download-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(15, 15, 30, 0.9);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--glass-border);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            header {
+                margin-top: 60px;
+                padding: 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+
+            .apps-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            footer .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--glass-light);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">💎 محفظتي</div>
+            <ul class="nav-links">
+                <li><a href="#apps">التطبيقات</a></li>
+                <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                <li><a href="app-ads.txt" target="_blank">التحقق</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>مرحباً بك في محفظتي</h1>
+        <p class="subtitle">اكتشف مجموعة تطبيقاتي المميزة على متجر Google Play. تطبيقات عالية الجودة مصممة لتسهيل حياتك اليومية.</p>
+    </header>
+
+    <!-- Apps Section -->
+    <section class="apps-section">
+        <div class="container">
+            <h2 class="section-title" id="apps">📱 تطبيقاتي</h2>
+            <div class="apps-grid">
+                <!-- App Card 1 -->
+                <div class="app-card">
+                    <div class="app-icon">🎮</div>
+                    <h3 class="app-title">تطبيق مثال 1</h3>
+                    <p class="app-description">تطبيق عملي وسهل الاستخدام يجعل حياتك أسهل وأكثر إنتاجية يومياً.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.example.app1" class="download-btn" target="_blank">تحميل من Google Play</a>
+                </div>
+
+                <!-- App Card 2 -->
+                <div class="app-card">
+                    <div class="app-icon">📚</div>
+                    <h3 class="app-title">تطبيق مثال 2</h3>
+                    <p class="app-description">تطبيق تعليمي مميز يوفر محتوى قيّم ومفيد لجميع المستخدمين.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.example.app2" class="download-btn" target="_blank">تحميل من Google Play</a>
+                </div>
+
+                <!-- App Card 3 -->
+                <div class="app-card">
+                    <div class="app-icon">🎵</div>
+                    <h3 class="app-title">تطبيق مثال 3</h3>
+                    <p class="app-description">تطبيق ترفيهي رائع يوفر تجربة استثنائية لجميع أعمارك وأذواقك.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.example.app3" class="download-btn" target="_blank">تحميل من Google Play</a>
+                </div>
+
+                <!-- App Card 4 -->
+                <div class="app-card">
+                    <div class="app-icon">💰</div>
+                    <h3 class="app-title">تطبيق مثال 4</h3>
+                    <p class="app-description">تطبيق مالي ذكي يساعدك في إدارة أموالك واستثماراتك بكفاءة.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.example.app4" class="download-btn" target="_blank">تحميل من Google Play</a>
+                </div>
+
+                <!-- App Card 5 -->
+                <div class="app-card">
+                    <div class="app-icon">🏃</div>
+                    <h3 class="app-title">تطبيق مثال 5</h3>
+                    <p class="app-description">تطبيق صحي وللياقة البدنية يتابع تقدمك نحو أهدافك الصحية.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.example.app5" class="download-btn" target="_blank">تحميل من Google Play</a>
+                </div>
+
+                <!-- App Card 6 -->
+                <div class="app-card">
+                    <div class="app-icon">🌍</div>
+                    <h3 class="app-title">تطبيق مثال 6</h3>
+                    <p class="app-description">تطبيق سفر وسياحة يساعدك في استكشاف العالم بطريقة ذكية.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.example.app6" class="download-btn" target="_blank">تحميل من Google Play</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2026 محفظتي. جميع الحقوق محفوظة.</p>
+            <ul class="footer-links">
+                <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                <li><a href="app-ads.txt" target="_blank">app-ads.txt</a></li>
+                <li><a href="#">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

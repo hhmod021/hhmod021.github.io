@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="سياسة الخصوصية - محفظتي">
+    <meta name="theme-color" content="#0f0f1e">
+    <title>سياسة الخصوصية - محفظتي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0f0f1e;
+            --bg-secondary: #1a1a2e;
+            --bg-tertiary: #16213e;
+            --glass-light: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.15);
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0c3;
+            --accent: #00d4ff;
+            --accent-hover: #00a8cc;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Tajawal', 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);
+            color: var(--text-primary);
+            line-height: 1.8;
+            background-attachment: fixed;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 15, 30, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1rem 2rem;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent) 0%, #0099ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 2rem 4rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            font-weight: 700;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .policy-section {
+            background: var(--glass-light);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-box {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-box a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(15, 15, 30, 0.9);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--glass-border);
+            padding: 2rem 2rem;
+            margin-top: 4rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 100px 1rem 2rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            nav .logo {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--glass-light);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">💎 محفظتي</div>
+            <a href="index.html" class="back-link">← العودة للرئيسية</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>🔒 سياسة الخصوصية</h1>
+        <div class="last-updated">آخر تحديث: سبتمبر 2026</div>
+
+        <!-- 1. Introduction -->
+        <div class="policy-section">
+            <h2>1. مقدمة</h2>
+            <p>أهلاً وسهلاً بك في <span class="highlight">محفظتي</span>. نحن ملتزمون بحماية خصوصيتك وضمان أعلى معايير حماية البيانات. تشرح هذه السياسة كيفية قيامنا بجمع واستخدام وحماية بيانات المستخدمين في تطبيقاتنا ومتجرنا على Google Play.</p>
+            <p>بتنزيل واستخدام تطبيقاتنا، فإنك توافق على شروط هذه السياسة. إذا كنت لا توافق على أي جزء منها، يرجى عدم استخدام تطبيقاتنا.</p>
+        </div>
+
+        <!-- 2. Data Collection -->
+        <div class="policy-section">
+            <h2>2. جمع البيانات</h2>
+            <p>نحن نجمع البيانات التالية من مستخدمينا:</p>
+            <h3>2.1 البيانات التي تقدمها أنت:</h3>
+            <ul>
+                <li><span class="highlight">معلومات التسجيل:</span> البريد الإلكتروني، اسم المستخدم، الملف الشخصي</li>
+                <li><span class="highlight">المحتوى:</span> أي محتوى تنشره في التطبيق</li>
+                <li><span class="highlight">معلومات التواصل:</span> الرسائل والتعليقات التي ترسلها</li>
+            </ul>
+
+            <h3>2.2 البيانات التي يتم جمعها تلقائياً:</h3>
+            <ul>
+                <li><span class="highlight">بيانات الجهاز:</span> نوع الجهاز، نظام التشغيل، معرّف الجهاز الفريد</li>
+                <li><span class="highlight">بيانات الاستخدام:</span> أوقات الاستخدام، الميزات المستخدمة، النقرات والتفاعلات</li>
+                <li><span class="highlight">بيانات الموقع:</span> الموقع الجغرافي (إذا سمحت بذلك)</li>
+                <li><span class="highlight">سجلات الأخطاء والانهيارات:</span> معلومات تشخيصية لتحسين التطبيق</li>
+            </ul>
+
+            <h3>2.3 بيانات Google AdMob:</h3>
+            <p>تطبيقاتنا تعرض إعلانات من <span class="highlight">Google AdMob</span>. يجمع Google AdMob بيانات التصفح والاهتمامات لعرض إعلانات موجهة. للمزيد، راجع <a href="https://support.google.com/admob/answer/6128543" target="_blank" style="color: var(--accent);">سياسة خصوصية Google AdMob</a>.</p>
+        </div>
+
+        <!-- 3. Data Usage -->
+        <div class="policy-section">
+            <h2>3. استخدام البيانات</h2>
+            <p>نستخدم البيانات التي نجمعها للأغراض التالية:</p>
+            <ul>
+                <li><span class="highlight">تحسين التطبيق:</span> فهم كيفية استخدام المستخدمين للتطبيق وتحسين الميزات</li>
+                <li><span class="highlight">الدعم الفني:</span> حل المشاكل والاستجابة لاستفساراتك</li>
+                <li><span class="highlight">الأمان والحماية:</span> منع الاحتيال والأنشطة غير القانونية</li>
+                <li><span class="highlight">الإعلانات:</span> عرض إعلانات ذات صلة عبر Google AdMob</li>
+                <li><span class="highlight">المراسلات:</span> إرسال التحديثات والإشعارات والعروض الترويجية (يمكنك إلغاء الاشتراك في أي وقت)</li>
+                <li><span class="highlight">الامتثال القانوني:</span> الامتثال للقوانين واللوائح المعمول بها</li>
+            </ul>
+        </div>
+
+        <!-- 4. Google Play Console Compliance -->
+        <div class="policy-section">
+            <h2>4. الامتثال لمتطلبات Google Play Console</h2>
+            <p>تطبيقاتنا تلتزم الكامل بسياسات متجر Google Play:</p>
+            <ul>
+                <li>✅ توفير سياسة خصوصية واضحة وشاملة</li>
+                <li>✅ حماية البيانات الشخصية للمستخدمين</li>
+                <li>✅ الحصول على الموافقة الصريحة قبل جمع البيانات الحساسة</li>
+                <li>✅ السماح للمستخدمين بحذف حساباتهم وبيانهم</li>
+                <li>✅ عدم بيع البيانات الشخصية لأطراف ثالثة</li>
+                <li>✅ حماية البيانات من خلال التشفير والممارسات الأمنية الحديثة</li>
+            </ul>
+        </div>
+
+        <!-- 5. Google AdMob Policy -->
+        <div class="policy-section">
+            <h2>5. سياسة Google AdMob</h2>
+            <p>تطبيقاتنا تستخدم <span class="highlight">Google AdMob</span> لعرض الإعلانات الموجهة. هذا يعني:</p>
+            <ul>
+                <li>قد يتم جمع بيانات عن أنشطتك على الإنترنت لعرض إعلانات ذات صلة</li>
+                <li>يمكنك إدارة تفضيلات الإعلانات في إعدادات Google الخاصة بك</li>
+                <li>نستخدم معرّف Google المعلن عنه (AAID) و ID الخاص بـ iOS</li>
+                <li>يمكنك تحديد "إعادة تعيين معرف الإعلان" في إعدادات جهازك</li>
+            </ul>
+
+            <h3>التحقق من ملكية التطبيق:</h3>
+            <p>لإثبات ملكية التطبيقات على متجر Google Play، نستخدم ملف <span class="highlight">app-ads.txt</span> في جذر الموقع. هذا الملف يحتوي على معرّف ناشرنا الفريد ويسمح لـ Google بالتحقق من أصالة الإعلانات.</p>
+        </div>
+
+        <!-- 6. Data Protection -->
+        <div class="policy-section">
+            <h2>6. حماية البيانات</h2>
+            <p>نتخذ إجراءات أمنية صارمة لحماية بيانات المستخدمين:</p>
+            <ul>
+                <li>🔐 <span class="highlight">التشفير:</span> تشفير جميع البيانات الحساسة أثناء النقل والتخزين</li>
+                <li>🔐 <span class="highlight">الوصول المحدود:</span> الوصول إلى البيانات محدود للموظفين المصرح لهم فقط</li>
+                <li>🔐 <span class="highlight">المراجعة الأمنية:</span> إجراء مراجعات أمنية منتظمة</li>
+                <li>🔐 <span class="highlight">الامتثال للمعايير:</span> نتابع معايير GDPR و CCPA والقوانين الخصوصية الأخرى</li>
+            </ul>
+        </div>
+
+        <!-- 7. User Rights -->
+        <div class="policy-section">
+            <h2>7. حقوق المستخدم</h2>
+            <p>لديك الحقوق التالية بشأن بيانات الخاص بك:</p>
+            <ul>
+                <li><span class="highlight">حق الوصول:</span> يمكنك طلب نسخة من البيانات التي نجمعها عنك</li>
+                <li><span class="highlight">حق التصحيح:</span> يمكنك تصحيح أي معلومات غير صحيحة</li>
+                <li><span class="highlight">حق الحذف:</span> يمكنك طلب حذف بيانات الخاص بك ("الحق في النسيان")</li>
+                <li><span class="highlight">حق الاعتراض:</span> يمكنك الاعتراض على معالجة بيانات الخاص بك</li>
+                <li><span class="highlight">حق النقل:</span> يمكنك طلب نقل بيانات الخاص بك إلى خدمة أخرى</li>
+            </ul>
+        </div>
+
+        <!-- 8. Third Parties -->
+        <div class="policy-section">
+            <h2>8. الأطراف الثالثة</h2>
+            <p>قد نشارك بيانات المستخدمين مع الأطراف الثالثة التالية:</p>
+            <h3>8.1 خدمات التحليل:</h3>
+            <ul>
+                <li><span class="highlight">Google Analytics:</span> لتحليل سلوك المستخدمين</li>
+                <li><span class="highlight">Firebase:</span> لتتبع الأحداث والانهيارات</li>
+            </ul>
+
+            <h3>8.2 الإعلانات:</h3>
+            <ul>
+                <li><span class="highlight">Google AdMob:</span> لعرض الإعلانات الموجهة</li>
+            </ul>
+
+            <h3>8.3 الامتثال القانوني:</h3>
+            <p>قد نشارك البيانات مع السلطات القانونية إذا اقتضت الضرورة الامتثال للقانون.</p>
+        </div>
+
+        <!-- 9. Children Privacy -->
+        <div class="policy-section">
+            <h2>9. خصوصية الأطفال</h2>
+            <p>تطبيقاتنا ليست موجهة للأطفال دون 13 سنة. إذا علمنا أننا جمعنا بيانات من طفل دون 13 سنة، سنحذفها فوراً. في حالات معينة، قد يكون للأطفال دون 18 سنة حقوق إضافية.</p>
+        </div>
+
+        <!-- 10. Changes to Policy -->
+        <div class="policy-section">
+            <h2>10. التغييرات على السياسة</h2>
+            <p>قد نقوم بتحديث هذه السياسة من وقت لآخر. سيتم إخطارك بأي تغييرات جوهرية عن طريق:</p>
+            <ul>
+                <li>نشر السياسة المحدثة على هذه الصفحة</li>
+                <li>إرسال إشعار عبر البريد الإلكتروني</li>
+                <li>طلب موافقتك الصريحة إذا لزم الأمر</li>
+            </ul>
+        </div>
+
+        <!-- 11. Contact Us -->
+        <div class="contact-box">
+            <h2>11. اتصل بنا</h2>
+            <p>إذا كان لديك أي أسئلة حول هذه السياسة أو حول كيفية معالجتنا لبيانات الخاص بك، يرجى التواصل معنا:</p>
+            <p><strong>البريد الإلكتروني:</strong> <a href="mailto:privacy@hhmod021.com">privacy@hhmod021.com</a></p>
+            <p><strong>الموقع:</strong> <a href="https://hhmod021.github.io" target="_blank">https://hhmod021.github.io</a></p>
+            <p style="margin-top: 1.5rem; font-size: 0.85rem;">سنرد على استفساراتك في غضون 30 يوماً من استقبالها.</p>
+        </div>
+
+        <!-- 12. Legal Compliance -->
+        <div class="policy-section">
+            <h2>12. الامتثال القانوني</h2>
+            <p>هذه السياسة تمتثل لـ:</p>
+            <ul>
+                <li>✅ <span class="highlight">GDPR</span> - اللائحة العامة لحماية البيانات (الاتحاد الأوروبي)</li>
+                <li>✅ <span class="highlight">CCPA</span> - قانون خصوصية المستهلك (كاليفورنيا)</li>
+                <li>✅ <span class="highlight">COPPA</span> - قانون حماية خصوصية الأطفال على الإنترنت</li>
+                <li>✅ <span class="highlight">Google Play Console Policies</span> - سياسات متجر Google Play</li>
+                <li>✅ <span class="highlight">Google AdMob Policies</span> - سياسات Google AdMob</li>
+                <li>✅ القوانين والتنظيمات المحلية والدولية ذات الصلة</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 محفظتي. جميع الحقوق محفوظة. | آخر تحديث: سبتمبر 2026</p>
+    </footer>
+</body>
+</html>
