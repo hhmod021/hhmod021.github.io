@@ -192,11 +192,41 @@
             margin-bottom: 0.5rem;
         }
 
-        .app-description {
+        .app-desc, .app-description {
             color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
             flex-grow: 1;
+        }
+
+        .btn-group {
+            width: 100%;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--accent) 0%, #0099ff 100%);
+            color: var(--bg-primary);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.2);
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, var(--accent-hover) 0%, #0077aa 100%);
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
         }
 
         .download-btn {
@@ -340,54 +370,18 @@
         <p class="subtitle">اكتشف مجموعة تطبيقاتي المميزة على متجر Google Play. تطبيقات عالية الجودة مصممة لتسهيل حياتك اليومية.</p>
     </header>
 
- <div class="app-card">
-    <div style="font-size: 60px; margin-bottom: 15px;">👑</div>
-    <div class="app-title">زخرفة الفخامة الملكية</div>
-    <div class="app-desc">تطبيق زخرفة احترافية للأسماء والألقاب، ومولد كلمات مرور معقدة وآمنة مع محفظة لحفظها.</div>
-    <div class="btn-group">
-        <a href="https://play.google.com/store/apps/details?id=com.zakhrafa.vippro" class="btn btn-primary" target="_blank">تحميل من Google Play</a>
-    </div>
-</div>
-
-
-                <!-- App Card 2 -->
+    <!-- Apps Section -->
+    <section id="apps" class="apps-section">
+        <div class="container">
+            <h2 class="section-title">تطبيقاتي</h2>
+            <div class="apps-grid">
                 <div class="app-card">
-                    <div class="app-icon">📚</div>
-                    <h3 class="app-title">تطبيق مثال 2</h3>
-                    <p class="app-description">تطبيق تعليمي مميز يوفر محتوى قيّم ومفيد لجميع المستخدمين.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.example.app2" class="download-btn" target="_blank">تحميل من Google Play</a>
-                </div>
-
-                <!-- App Card 3 -->
-                <div class="app-card">
-                    <div class="app-icon">🎵</div>
-                    <h3 class="app-title">تطبيق مثال 3</h3>
-                    <p class="app-description">تطبيق ترفيهي رائع يوفر تجربة استثنائية لجميع أعمارك وأذواقك.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.example.app3" class="download-btn" target="_blank">تحميل من Google Play</a>
-                </div>
-
-                <!-- App Card 4 -->
-                <div class="app-card">
-                    <div class="app-icon">💰</div>
-                    <h3 class="app-title">تطبيق مثال 4</h3>
-                    <p class="app-description">تطبيق مالي ذكي يساعدك في إدارة أموالك واستثماراتك بكفاءة.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.example.app4" class="download-btn" target="_blank">تحميل من Google Play</a>
-                </div>
-
-                <!-- App Card 5 -->
-                <div class="app-card">
-                    <div class="app-icon">🏃</div>
-                    <h3 class="app-title">تطبيق مثال 5</h3>
-                    <p class="app-description">تطبيق صحي وللياقة البدنية يتابع تقدمك نحو أهدافك الصحية.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.example.app5" class="download-btn" target="_blank">تحميل من Google Play</a>
-                </div>
-
-                <!-- App Card 6 -->
-                <div class="app-card">
-                    <div class="app-icon">🌍</div>
-                    <h3 class="app-title">تطبيق مثال 6</h3>
-                    <p class="app-description">تطبيق سفر وسياحة يساعدك في استكشاف العالم بطريقة ذكية.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.example.app6" class="download-btn" target="_blank">تحميل من Google Play</a>
+                    <div style="font-size: 60px; margin-bottom: 15px; text-align: center;">👑</div>
+                    <div class="app-title">زخرفة الفخامة الملكية</div>
+                    <div class="app-desc">تطبيق زخرفة احترافية للأسماء والألقاب، ومولد كلمات مرور معقدة وآمنة مع محفظة لحفظها.</div>
+                    <div class="btn-group">
+                        <a href="https://play.google.com/store/apps/details?id=com.zakhrafa.vippro" class="btn btn-primary" target="_blank">تحميل من Google Play</a>
+                    </div>
                 </div>
             </div>
         </div>
