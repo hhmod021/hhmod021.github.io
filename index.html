@@ -74,6 +74,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            white-space: nowrap;
         }
 
         nav .nav-links {
@@ -306,9 +307,31 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            nav {
+                padding: 0.75rem 1rem;
+            }
+
+            nav .container {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            nav .logo {
+                font-size: 1.1rem;
+                white-space: nowrap;
+                flex-basis: 100%;
+                order: -1;
+            }
+
             nav .nav-links {
                 gap: 1rem;
-                font-size: 0.85rem;
+                font-size: 0.75rem;
+                flex-basis: 100%;
+                justify-content: center;
+            }
+
+            nav .nav-links a {
+                font-size: 0.75rem;
             }
 
             header {
@@ -317,7 +340,7 @@
             }
 
             h1 {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
 
             .section-title {
@@ -365,7 +388,7 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">💎 HAMMOOD IBRAHIM KHALEEL</div>
+            <div class="logo">💎 HAMMOOD IBRAHIM</div>
             <ul class="nav-links">
                 <li><a href="#apps">التطبيقات</a></li>
                 <li><a href="privacy.html">سياسة الخصوصية</a></li>
@@ -376,8 +399,8 @@
 
     <!-- Header -->
     <header>
-        <h1>الموقع الرسمي للمطور HAMMOOD IBRAHIM KHALEEL</h1>
-        <p class="subtitle">اكتشف مجموعة تطبيقاتي المميزة على متجر Google Play. تطبيقات عالية الجودة مصممة لتسهيل حياتك اليو[...]
+        <h1>الموقع الرسمي للمطور HAMMOOD</h1>
+        <p class="subtitle">اكتشف مجموعة تطبيقاتي المميزة على متجر Google Play. تطبيقات عالية الجودة مصممة لتسهيل حياتك اليومية.</p>
     </header>
 
     <!-- Apps Section -->
@@ -388,7 +411,7 @@
                 <div class="app-card">
                     <div style="font-size: 60px; margin-bottom: 15px; text-align: center;">👑</div>
                     <div class="app-title">زخرفة الفخامة الملكية</div>
-                    <div class="app-desc">تطبيق زخرفة احترافية للأسماء والألقاب، ومولد كلمات مرور معقدة وآمنة مع محفظة لحفظه�[...]
+                    <div class="app-desc">تطبيق زخرفة احترافية للأسماء والألقاب، ومولد كلمات مرور معقدة وآمنة مع محفظة لحفظها.</div>
                     <div class="btn-group">
                         <a href="https://play.google.com/store/apps/details?id=com.zakhrafa.vippro" class="btn btn-primary" target="_blank">تحميل من Google Play</a>
                     </div>
