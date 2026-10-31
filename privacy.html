@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="سياسة الخصوصية - محفظتي">
+    <meta name="description" content="سياسة الخصوصية - لعبة احزر الصورة">
     <meta name="theme-color" content="#0f0f1e">
-    <title>سياسة الخصوصية - محفظتي</title>
+    <title>سياسة الخصوصية - لعبة احزر الصورة</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
@@ -20,12 +20,13 @@
             --bg-primary: #0f0f1e;
             --bg-secondary: #1a1a2e;
             --bg-tertiary: #16213e;
-            --glass-light: rgba(255, 255, 255, 0.08);
-            --glass-border: rgba(255, 255, 255, 0.15);
+            --glass-light: rgba(255, 255, 255, 0.06);
+            --glass-border: rgba(255, 255, 255, 0.12);
             --text-primary: #ffffff;
             --text-secondary: #b0b0c3;
             --accent: #00d4ff;
             --accent-hover: #00a8cc;
+            --success: #10b981;
         }
 
         html {
@@ -40,7 +41,6 @@
             background-attachment: fixed;
         }
 
-        /* Navigation Bar */
         nav {
             position: fixed;
             top: 0;
@@ -62,7 +62,7 @@
         }
 
         nav .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             background: linear-gradient(135deg, var(--accent) 0%, #0099ff 100%);
             -webkit-background-clip: text;
@@ -81,16 +81,15 @@
             color: var(--text-primary);
         }
 
-        /* Container */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 120px 2rem 4rem;
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 0.75rem;
             text-align: center;
             font-weight: 700;
         }
@@ -98,13 +97,22 @@
         .last-updated {
             text-align: center;
             color: var(--text-secondary);
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             font-size: 0.95rem;
+        }
+
+        .policy-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         h2 {
             font-size: 1.5rem;
-            margin-top: 2.5rem;
+            margin-top: 1.5rem;
             margin-bottom: 1rem;
             color: var(--accent);
             font-weight: 700;
@@ -117,6 +125,7 @@
             margin-top: 1.5rem;
             margin-bottom: 0.5rem;
             font-weight: 600;
+            color: var(--text-primary);
         }
 
         p {
@@ -126,7 +135,7 @@
         }
 
         ul, ol {
-            margin-right: 2rem;
+            margin-right: 1.5rem;
             margin-bottom: 1rem;
             color: var(--text-primary);
         }
@@ -140,26 +149,13 @@
             font-weight: 600;
         }
 
-        .policy-section {
-            background: var(--glass-light);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            border-radius: 15px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
         .contact-box {
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid var(--accent);
-            border-radius: 15px;
-            padding: 2rem;
+            background: rgba(0, 212, 255, 0.08);
+            border: 1px solid rgba(0, 212, 255, 0.35);
+            border-radius: 18px;
+            padding: 1.75rem;
+            margin-top: 2rem;
             text-align: center;
-            margin-top: 3rem;
-        }
-
-        .contact-box p {
-            margin-bottom: 0.5rem;
         }
 
         .contact-box a {
@@ -172,38 +168,31 @@
             text-decoration: underline;
         }
 
-        /* Footer */
         footer {
             background: rgba(15, 15, 30, 0.9);
             backdrop-filter: blur(10px);
             border-top: 1px solid var(--glass-border);
             padding: 2rem 2rem;
-            margin-top: 4rem;
             text-align: center;
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .container {
                 padding: 100px 1rem 2rem;
             }
 
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            h2 {
-                font-size: 1.2rem;
+            nav .container {
+                gap: 0.5rem;
+                flex-wrap: wrap;
             }
 
             nav .logo {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
         }
 
-        /* Scrollbar Styling */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -223,212 +212,115 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">💎 محفظتي</div>
+            <div class="logo">🎮 احزر الصورة</div>
             <a href="index.html" class="back-link">← العودة للرئيسية</a>
         </div>
     </nav>
 
-    <!-- Main Content -->
     <div class="container">
-        <h1>🔒 سياسة الخصوصية</h1>
-        <div class="last-updated">آخر تحديث: سبتمبر 2026</div>
+        <h1>سياسة الخصوصية</h1>
+        <div class="last-updated">آخر تحديث: 31 أكتوبر 2026</div>
 
-        <div class="policy-section">
-            <h2>MP3 Music Player / مشغل الموسيقى MP3</h2>
-            <p><strong>Developer / المطور:</strong> <span class="highlight">HAMMOOD IBRAHIM KHALEEL</span></p>
-            <p><strong>GitHub Account / اسم حساب GitHub:</strong> <span class="highlight">hhmod021</span></p>
-            <p><strong>Application Name / اسم التطبيق:</strong> <span class="highlight">MP3 Music Player (مشغل الموسيقى MP3)</span></p>
-            <p><strong>Package Name / اسم الحزمة:</strong> <span class="highlight">com.hmoodibrahim.musicplayer</span></p>
+        <div class="policy-card">
+            <p><strong>اسم اللعبة:</strong> <span class="highlight">لعبة احزر الصورة</span></p>
+            <p><strong>المطور:</strong> <span class="highlight">HAMMOOD IBRAHIM KHALEEL</span></p>
+            <p><strong>البريد الإلكتروني للدعم:</strong> <span class="highlight">hhmod021@gmail.com</span></p>
 
-            <h3>1. About the app / نبذة عن التطبيق</h3>
-            <p>تعمل تطبيقاتنا <span class="highlight">MP3 Music Player</span> بالكامل <strong>offline</strong> و<strong>local</strong> على جهاز المستخدم، دون الحاجة إلى الاتصال بالإنترنت أو تسجيل حساب. لا يقوم التطبيق بتحميل أو نقل أو مزامنة أي محتوى موسيقي أو معلومات شخصية من الجهاز إلى أي خوادم خارجية أو خدمات سحابية.</p>
-            <p>The <span class="highlight">MP3 Music Player</span> app operates entirely <strong>offline</strong> and <strong>locally</strong> on the user's device. It does not require internet access to play music, organize local audio files, or provide core functionality. The app does not upload, sync, or transmit music files, personal data, or private user information to any external servers.</p>
-
-            <h3>2. Data collection / جمع البيانات</h3>
-            <p>لا يقوم التطبيق بجمع أو تخزين أو مشاركة أي بيانات شخصية أو حساسة أو خاصة للمستخدم. لا نقوم بإنشاء ملفات تعريف أو حسابات مستخدمين، ولا نقوم بتخزين سجل للموقع أو سجل التشغيل الخاص بك، ولا نرسل هذه البيانات إلى أي خادم خارجي.</p>
-            <p>The app does <strong>not collect, store, or share</strong> any personal, sensitive, or private user data to any external servers, third parties, or cloud services. We do not access, upload, or transmit your personal contacts, messages, photos, browsing activity, device ID, or location data for advertising or analytics purposes.</p>
-
-            <h3>3. Permissions and local device usage / الأذونات والاستخدام المحلي</h3>
-            <p>أي أذونات مطلوبة (مثل الوصول إلى الملفات الصوتية أو التخزين المحلي) تُستخدم حصريًا بهدف <strong>قراءة وتشغيل ملفات الموسيقى المحلية المخزنة على جهاز المستخدم</strong> فقط. لا يتم استخدام هذه الأذونات لأي غرض آخر مثل جمع البيانات أو المراقبة أو مشاركة المحتوى أو التتبع.</p>
-            <p>Any requested permissions, such as local audio/storage access, are used strictly and solely for the purpose of <strong>reading and playing local music files stored on the user's device</strong>. These permissions are not used for data collection, advertising, analytics, user profiling, location tracking, or transmission of user information to any external server.</p>
-
-            <h3>4. No external data sharing / عدم مشاركة البيانات الخارجية</h3>
-            <p>لا يقوم التطبيق ببيع أو تأجير أو تبادل أي معلومات شخصية أو محتوى موسيقي أو بيانات الجهاز مع أي طرف ثالث. كما لا نقوم بمشاركة البيانات مع الشركات الإعلانية أو خدمات التحليل أو مزودين خارجيين.</p>
-            <p>The app does not sell, rent, trade, or otherwise share any personal data, media files, or device information with third parties. There is no ad SDK, analytics SDK, or cloud backend collecting or transmitting user information.</p>
-
-            <h3>5. Local-only operation / التشغيل المحلي فقط</h3>
-            <p>يعمل التطبيق بشكل أساسي محليًا داخل الجهاز، ويعتمد على ملفات الموسيقى الموجودة على التخزين المحلي. لا يلزم الاتصال بخادم أو خدمات إنترنت لتشغيل الأغاني الموجودة في مكتبة المستخدم. كل الوظائف الأساسية للمؤثرات الصوتية والقراءة والتشغيل تتم داخل الجهاز نفسه.</p>
-            <p>The application functions locally on the device and relies on music files stored in the user's local storage. Internet connectivity is not required for the core experience. All essential playback and media access functions are performed on the device itself without any remote data transfer.</p>
-
-            <h3>6. User privacy commitment / التزام الخصوصية</h3>
-            <p>نحن نلتزم بحماية خصوصية المستخدمين ونتعامل مع الملفات الصوتية المحلية باحترام تام. إذا تغيرت أي سياسة أو آلية معالجة البيانات في المستقبل، سيتم تحديث هذه الصفحة بشكل واضح ومباشر.</p>
-            <p>We are committed to protecting user privacy and treating local music files with respect. If any future policy or data handling practice changes, this page will be updated clearly and directly.</p>
-        </div>
-
-        <!-- 1. Introduction -->
-        <div class="policy-section">
             <h2>1. مقدمة</h2>
-            <p>أهلاً وسهلاً بك في <span class="highlight">محفظتي</span>. نحن ملتزمون بحماية خصوصيتك وضمان أعلى معايير حماية البيانات داخل جميع تطبيقاتنا، بما في ذلك التطبيق الخاص بنا <span class="highlight">MP3 Music Player</span>.</p>
-            <p>بـتنزيل واستخدام تطبيقاتنا، فإنك توافق على شروط هذه السياسة. إذا كنت لا توافق على أي جزء منها، يرجى عدم استخدام التطبيق.</p>
+            <p>نحن نحرص على احترام خصوصية مستخدمي لعبة <span class="highlight">احزر الصورة</span>، ونسعى إلى حماية بياناتهم ومعلوماتهم الشخصية بأعلى مستوى من العناية والالتزام. توضح هذه السياسة كيفية جمعنا واستخدامنا وحفظنا للمعلومات المتعلقة بتجربة اللعب، مع التأكيد على أن اللعبة مصممة لتقديم تجربة ممتعة وآمنة دون تعريض خصوصية المستخدمين للخطر.</p>
+            <p>بممارسة المستخدم للعبة، يوافق على الشروط المذكورة في هذه السياسة. إذا لم يقبل بأي جزء منها، يرجى عدم استخدام اللعبة أو التفاعل معها.</p>
         </div>
 
-        <!-- 2. Data Collection -->
-        <div class="policy-section">
-            <h2>2. جمع البيانات</h2>
-            <p>نحن نجمع البيانات التالية من مستخدمينا:</p>
-            <h3>2.1 البيانات التي تقدمها أنت:</h3>
+        <div class="policy-card">
+            <h2>2. ما لا نجمعه</h2>
+            <p>اللعبة لا تتطلب إنشاء حساب أو تسجيل دخول. لذلك نحن لا نقوم بجمع:</p>
             <ul>
-                <li><span class="highlight">معلومات التسجيل:</span> البريد الإلكتروني، اسم المستخدم، الملف الشخصي</li>
-                <li><span class="highlight">المحتوى:</span> أي محتوى تنشره في التطبيق</li>
-                <li><span class="highlight">معلومات التواصل:</span> الرسائل والتعليقات التي ترسلها</li>
+                <li>الاسم الكامل أو اسم المستخدم الحقيقي.</li>
+                <li>رقم الهاتف أو عنوان البريد الإلكتروني من داخل اللعبة.</li>
+                <li>عنوان السكن أو الموقع الجغرافي الدقيق.</li>
+                <li>صور أو ملفات شخصية من المستخدمين.</li>
+                <li>معلومات الحسابات الاجتماعية أو بيانات الهوية.</li>
             </ul>
-
-            <h3>2.2 البيانات التي يتم جمعها تلقائياً:</h3>
-            <ul>
-                <li><span class="highlight">بيانات الجهاز:</span> نوع الجهاز، نظام التشغيل، معرّف الجهاز الفريد</li>
-                <li><span class="highlight">بيانات الاستخدام:</span> أوقات الاستخدام، الميزات المستخدمة، النقرات والتفاعلات</li>
-                <li><span class="highlight">بيانات الموقع:</span> الموقع الجغرافي (إذا سمحت بذلك)</li>
-                <li><span class="highlight">سجلات الأخطاء والانهيارات:</span> معلومات تشخيصية لتحسين التطبيق</li>
-            </ul>
-
-            <h3>2.3 بيانات Google AdMob:</h3>
-            <p>تطبيقاتنا تعرض إعلانات من <span class="highlight">Google AdMob</span>. يجمع Google AdMob بيانات التصفح والاهتمامات لعرض الإعلانات ذات الصلة.</p>
+            <p>كما أننا لا نقوم بإنشاء ملف شخصي للاعب داخل التطبيق، ولا نقوم بتخزين سجلات الألعاب الشخصية أو نتائج المستخدمين في خادمنا إلا إذا تم تحديد ذلك لاحقاً بوضوح في سياسة مستقلة ومحدثة.</p>
         </div>
 
-        <!-- 3. Data Usage -->
-        <div class="policy-section">
-            <h2>3. استخدام البيانات</h2>
-            <p>نستخدم البيانات التي نجمعها للأغراض التالية:</p>
+        <div class="policy-card">
+            <h2>3. جمع البيانات التقنية</h2>
+            <p>قد يتم جمع بعض المعلومات التقنية الضرورية لتشغيل اللعبة بشكل صحيح وتحسين تجربة المستخدم، مثل:</p>
             <ul>
-                <li><span class="highlight">تحسين التطبيق:</span> فهم كيفية استخدام المستخدمين للتطبيق وتحسين الميزات</li>
-                <li><span class="highlight">الدعم الفني:</span> حل المشاكل والاستجابة لاستفساراتك</li>
-                <li><span class="highlight">الأمان والحماية:</span> منع الاحتيال والأنشطة غير القانونية</li>
-                <li><span class="highlight">الإعلانات:</span> عرض إعلانات ذات صلة عبر Google AdMob</li>
-                <li><span class="highlight">المراسلات:</span> إرسال التحديثات والإشعارات والعروض الترويجية (يمكنك إلغاء الاشتراك في أي وقت)</li>
-                <li><span class="highlight">الامتثال القانوني:</span> الامتثال للقوانين واللوائح المعمول بها</li>
+                <li>نوع الجهاز ونظام التشغيل.</li>
+                <li>لغة الجهاز.</li>
+                <li>معرّف الإعلان (Ad ID) عند استخدام الإعلانات.</li>
+                <li>معلومات فنية حول الأداء والأخطاء (في حال حدوث مشكلة فنية).</li>
             </ul>
+            <p>هذه المعلومات تُستخدم فقط للأغراض الفنية والإحصائية وتحسين جودة اللعبة، وليست بيانات شخصية تعرّف المستخدم مباشرةً.</p>
         </div>
 
-        <!-- 4. Google Play Console Compliance -->
-        <div class="policy-section">
-            <h2>4. الامتثال لمتطلبات Google Play Console</h2>
-            <p>تطبيقاتنا تلتزم الكامل بسياسات متجر Google Play:</p>
-            <ul>
-                <li>✅ توفير سياسة خصوصية واضحة وشاملة</li>
-                <li>✅ حماية البيانات الشخصية للمستخدمين</li>
-                <li>✅ الحصول على الموافقة الصريحة قبل جمع البيانات الحساسة</li>
-                <li>✅ السماح للمستخدمين بحذف حساباتهم وبيانهم</li>
-                <li>✅ عدم بيع البيانات الشخصية لأطراف ثالثة</li>
-                <li>✅ حماية البيانات من خلال التشفير والممارسات الأمنية الحديثة</li>
-            </ul>
+        <div class="policy-card">
+            <h2>4. الصور والموارد داخل اللعبة</h2>
+            <p>اللعبة قد تستخدم صوراً ورسومات وألغازاً يتم تحميلها من مصادر موثوقة مثل خدمات الاستضافة السحابية أو الروابط الخارجية ذات الصلة بتجربة اللعب. هذه الصور لا تُستخدم لتتبع المستخدم أو جمع بياناته الشخصية، بل تُستخدم فقط لعرض محتوى اللعبة بصورة صحيحة وسلسة.</p>
+            <p>لا نقوم برفع صور المستخدم أو محتوى الأجهزة الشخصية إلى الخوادم إلا إذا تم ذلك صراحةً من قبل المستخدم في حالة معينة ومدوّنة بوضوح في تحديثات لاحقة.</p>
         </div>
 
-        <!-- 5. Google AdMob Policy -->
-        <div class="policy-section">
-            <h2>5. سياسة Google AdMob</h2>
-            <p>تطبيقاتنا تستخدم <span class="highlight">Google AdMob</span> لعرض الإعلانات الموجهة. هذا يعني:</p>
+        <div class="policy-card">
+            <h2>5. الإعلانات</h2>
+            <p>قد تعرض اللعبة إعلانات من خلال شبكات إعلانية موثوقة مثل <span class="highlight">Google AdMob</span>، وذلك لتغطية تكاليف التطوير وتقديم اللعبة مجاناً. قد تستخدم هذه الشبكات معلومات تقنية لتخصيص الإعلانات المعروضة، مثل:</p>
             <ul>
-                <li>قد يتم جمع بيانات عن أنشطتك على الإنترنت لعرض إعلانات ذات صلة</li>
-                <li>يمكنك إدارة تفضيلات الإعلانات في إعدادات Google الخاصة بك</li>
-                <li>نستخدم معرّف Google المعلن عنه (AAID) و ID الخاص بـ iOS</li>
-                <li>يمكنك تحديد "إعادة تعيين معرف الإعلان" في إعدادات جهازك</li>
+                <li>نوع الجهاز.</li>
+                <li>لغة الجهاز.</li>
+                <li>معرّف الإعلان (Ad ID).</li>
+                <li>بيانات إعلانية عامة تخص سلوك المستخدم داخل التطبيق أو عبر النظام.</li>
             </ul>
-
-            <h3>التحقق من ملكية التطبيق:</h3>
-            <p>لإثبات ملكية التطبيقات على متجر Google Play، نستخدم ملف <span class="highlight">app-ads.txt</span> في جذر الموقع. هذا الملف يثبت أن التطبيق مملوك لنا ومستخدم بشكل قانوني.</p>
+            <p>قد تخضع هذه البيانات لسياسات شبكة الإعلانات المستخدمة، ويُرجى مراجعة سياسة الخصوصية الخاصة بـ Google AdMob أو مزود الإعلانات المعتمد في كل وقت لمعرفة التفاصيل الدقيقة.</p>
         </div>
 
-        <!-- 6. Data Protection -->
-        <div class="policy-section">
-            <h2>6. حماية البيانات</h2>
-            <p>نتخذ إجراءات أمنية صارمة لحماية بيانات المستخدمين:</p>
+        <div class="policy-card">
+            <h2>6. استخدام البيانات</h2>
+            <p>نستخدم البيانات المجمعة فقط للأغراض التالية:</p>
             <ul>
-                <li>🔐 <span class="highlight">التشفير:</span> تشفير جميع البيانات الحساسة أثناء النقل والتخزين</li>
-                <li>🔐 <span class="highlight">الوصول المحدود:</span> الوصول إلى البيانات محدود للموظفين المصرح لهم فقط</li>
-                <li>🔐 <span class="highlight">المراجعة الأمنية:</span> إجراء مراجعات أمنية منتظمة</li>
-                <li>🔐 <span class="highlight">الامتثال للمعايير:</span> نتابع معايير GDPR و CCPA والقوانين الخصوصية الأخرى</li>
+                <li>تحسين أداء اللعبة واستقرارها.</li>
+                <li>تحديد المشاكل التقنية أو الأعطال.</li>
+                <li>تطوير محتوى اللعبة وتصميم التجربة.</li>
+                <li>عرض الإعلانات المناسبة والتقليل من الإعلانات غير ذات الصلة.</li>
             </ul>
+            <p>لا نبيع أو نؤجر أو نشارك بيانات المستخدم مع أطراف خارجية لأغراض تجارية دون موافقة صريحة، إلا إذا كان ذلك مطلوباً بموجب القانون أو لتمكين خدمات إعلانية موثوقة.</p>
         </div>
 
-        <!-- 7. User Rights -->
-        <div class="policy-section">
-            <h2>7. حقوق المستخدم</h2>
-            <p>لديك الحقوق التالية بشأن بيانات الخاص بك:</p>
+        <div class="policy-card">
+            <h2>7. التخزين والحماية</h2>
+            <p>نلتزم بحماية المعلومات التي قد نجمعها من خلال تطبيقاتنا باستخدام وسائل أمنية مناسبة، بما في ذلك:</p>
             <ul>
-                <li><span class="highlight">حق الوصول:</span> يمكنك طلب نسخة من البيانات التي نجمعها عنك</li>
-                <li><span class="highlight">حق التصحيح:</span> يمكنك تصحيح أي معلومات غير صحيحة</li>
-                <li><span class="highlight">حق الحذف:</span> يمكنك طلب حذف بيانات الخاص بك ("الحق في النسيان")</li>
-                <li><span class="highlight">حق الاعتراض:</span> يمكنك الاعتراض على معالجة بيانات الخاص بك</li>
-                <li><span class="highlight">حق النقل:</span> يمكنك طلب نقل بيانات الخاص بك إلى خدمة أخرى</li>
+                <li>تقييد الوصول إلى البيانات.</li>
+                <li>استخدام بيئات آمنة للتخزين عند الحاجة.</li>
+                <li>إجراء مراجعات مستمرة للتحقق من سلامة إجراءات الحماية.</li>
             </ul>
+            <p>ومع ذلك، لا يمكن ضمان الأمان الكامل للبيانات في الأنظمة الرقمية بشكل مطلق، لذلك نعمل على اتخاذ الخطوات المعقولة لضمان حماية المستخدم.</p>
         </div>
 
-        <!-- 8. Third Parties -->
-        <div class="policy-section">
-            <h2>8. الأطراف الثالثة</h2>
-            <p>قد نشارك بيانات المستخدمين مع الأطراف الثالثة التالية:</p>
-            <h3>8.1 خدمات التحليل:</h3>
-            <ul>
-                <li><span class="highlight">Google Analytics:</span> لتحليل سلوك المستخدمين</li>
-                <li><span class="highlight">Firebase:</span> لتتبع الأحداث والانهيارات</li>
-            </ul>
-
-            <h3>8.2 الإعلانات:</h3>
-            <ul>
-                <li><span class="highlight">Google AdMob:</span> لعرض الإعلانات الموجهة</li>
-            </ul>
-
-            <h3>8.3 الامتثال القانوني:</h3>
-            <p>قد نشارك البيانات مع السلطات القانونية إذا اقتضت الضرورة الامتثال للقانون.</p>
+        <div class="policy-card">
+            <h2>8. خصوصية الأطفال</h2>
+            <p>اللعبة مصممة لتناسب جميع الفئات العمرية، وهي مناسبة للاستخدام العائلي بشكل عام. نحن لا نقوم بجمع بيانات شخصية أو حساسة من الأطفال بشكل متعمد، ولا نطلب منهم تقديم معلومات تعريف شخصية داخل اللعبة.</p>
+            <p>إذا تم اكتشاف أي جمع غير مقصود لبيانات طفل، سنعمل على حذفها فوراً عند التحقق من الأمر.</p>
         </div>
 
-        <!-- 9. Children Privacy -->
-        <div class="policy-section">
-            <h2>9. خصوصية الأطفال</h2>
-            <p>تطبيقاتنا ليست موجهة للأطفال دون 13 سنة. إذا علمنا أننا جمعنا بيانات من طفل دون 13 سنة، سنحذفها فوراً.</p>
+        <div class="policy-card">
+            <h2>9. التغييرات في سياسة الخصوصية</h2>
+            <p>قد نعدل هذه السياسة من وقت لآخر لتحديثها بما يتوافق مع التطورات في اللعبة أو الخدمات المستخدمة أو اللوائح القانونية. أي تحديث جوهري سيتم الإعلان عنه من خلال هذه الصفحة أو عبر الارتباط المرتبط بها.</p>
+            <p>نوصي المستخدم بمراجعة هذه السياسة بشكل دوري للاستمرار على اطلاع دائم بأي تعديل جديد.</p>
         </div>
 
-        <!-- 10. Changes to Policy -->
-        <div class="policy-section">
-            <h2>10. التغييرات على السياسة</h2>
-            <p>قد نقوم بتحديث هذه السياسة من وقت لآخر. سيتم إخطارك بأي تغييرات جوهرية عن طريق:</p>
-            <ul>
-                <li>نشر السياسة المحدثة على هذه الصفحة</li>
-                <li>إرسال إشعار عبر البريد الإلكتروني</li>
-                <li>طلب موافقتك الصريحة إذا لزم الأمر</li>
-            </ul>
-        </div>
-
-        <!-- 11. Contact Us -->
-        <div class="contact-box">
-            <h2>11. اتصل بنا</h2>
-            <p>إذا كان لديك أي أسئلة حول هذه السياسة أو حول كيفية معالجتنا لبيانات ال��اص بك، يرجى التواصل معنا:</p>
-            <p><strong>البريد الإلكتروني:</strong> <a href="mailto:privacy@hhmod021.com">privacy@hhmod021.com</a></p>
-            <p><strong>الموقع:</strong> <a href="https://hhmod021.github.io" target="_blank">https://hhmod021.github.io</a></p>
-            <p style="margin-top: 1.5rem; font-size: 0.85rem;">سنرد على استفساراتك في غضون 30 يوماً من استقبالها.</p>
-        </div>
-
-        <!-- 12. Legal Compliance -->
-        <div class="policy-section">
-            <h2>12. الامتثال القانوني</h2>
-            <p>هذه السياسة تمتثل لـ:</p>
-            <ul>
-                <li>✅ <span class="highlight">GDPR</span> - اللائحة العامة لحماية البيانات (الاتحاد الأوروبي)</li>
-                <li>✅ <span class="highlight">CCPA</span> - قانون خصوصية المستهلك (كاليفورنيا)</li>
-                <li>✅ <span class="highlight">COPPA</span> - قانون حماية خصوصية الأطفال على الإنترنت</li>
-                <li>✅ <span class="highlight">Google Play Console Policies</span> - سياسات متجر Google Play</li>
-                <li>✅ <span class="highlight">Google AdMob Policies</span> - سياسات Google AdMob</li>
-                <li>✅ القوانين والتنظيمات المحلية والدولية ذات الصلة</li>
-            </ul>
+        <div class="policy-card">
+            <h2>10. التواصل</h2>
+            <p>إذا كان لديك أي سؤال أو استفسار أو ملاحظة بخصوص سياسة الخصوصية أو استخدام بياناتك داخل اللعبة، يمكنك التواصل معنا عبر البريد الإلكتروني التالي:</p>
+            <p><strong>البريد الإلكتروني:</strong> <a href="mailto:hhmod021@gmail.com" class="highlight">hhmod021@gmail.com</a></p>
+            <p>نحن نقدّر تواصلك معنا وسنحاول الرد عليك في أقرب وقت ممكن.</p>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2026 محفظتي. جميع الحقوق محفوظة. | آخر تحديث: سبتمبر 2026</p>
+        <p>© 2026 لعبة احزر الصورة. جميع الحقوق محفوظة.</p>
     </footer>
 </body>
 </html>
