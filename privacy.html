@@ -3,36 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="سياسة الخصوصية - لعبة احزر الصورة">
+    <meta name="description" content="سياسة الخصوصية - تطبيقات HAMMOOD IBRAHIM">
     <meta name="theme-color" content="#0f0f1e">
-    <title>سياسة الخصوصية - لعبة احزر الصورة</title>
+    <title>سياسة الخصوصية - تطبيقات HAMMOOD</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --bg-primary: #0f0f1e;
             --bg-secondary: #1a1a2e;
             --bg-tertiary: #16213e;
-            --glass-light: rgba(255, 255, 255, 0.06);
-            --glass-border: rgba(255, 255, 255, 0.12);
+            --glass-light: rgba(255,255,255,0.06);
+            --glass-border: rgba(255,255,255,0.12);
             --text-primary: #ffffff;
             --text-secondary: #b0b0c3;
             --accent: #00d4ff;
             --accent-hover: #00a8cc;
             --success: #10b981;
         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Tajawal', 'Inter', sans-serif;
             background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);
@@ -40,181 +31,92 @@
             line-height: 1.8;
             background-attachment: fixed;
         }
-
         nav {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(15, 15, 30, 0.8);
+            top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(15,15,30,0.82);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--glass-border);
             padding: 1rem 2rem;
         }
-
         nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            max-width: 1200px; margin: 0 auto;
         }
-
         nav .logo {
-            font-size: 1.4rem;
-            font-weight: 700;
+            font-size: 1.4rem; font-weight: 700;
             background: linear-gradient(135deg, var(--accent) 0%, #0099ff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
-
         nav .back-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 0.95rem;
+            color: var(--accent); text-decoration: none; font-size: 0.95rem;
             transition: color 0.3s ease;
         }
-
-        nav .back-link:hover {
-            color: var(--text-primary);
-        }
-
+        nav .back-link:hover { color: var(--text-primary); }
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 120px 2rem 4rem;
+            max-width: 1100px; margin: 0 auto; padding: 120px 2rem 4rem;
         }
-
         h1 {
             font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: 0.75rem;
-            text-align: center;
-            font-weight: 700;
+            margin-bottom: 0.75rem; text-align: center; font-weight: 700;
         }
-
         .last-updated {
-            text-align: center;
-            color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-            font-size: 0.95rem;
+            text-align: center; color: var(--text-secondary);
+            margin-bottom: 2.5rem; font-size: 0.95rem;
         }
-
         .policy-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255,255,255,0.03);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 1.75rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 20px; padding: 1.75rem; margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
-
         h2 {
-            font-size: 1.5rem;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent);
-            font-weight: 700;
-            padding-bottom: 0.5rem;
+            font-size: 1.5rem; margin-top: 1.7rem; margin-bottom: 0.9rem;
+            color: var(--accent); font-weight: 700; padding-bottom: 0.45rem;
             border-bottom: 1px solid var(--glass-border);
         }
-
         h3 {
-            font-size: 1.1rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--text-primary);
+            font-size: 1.12rem; margin-top: 1.3rem; margin-bottom: 0.5rem;
+            font-weight: 600; color: var(--text-primary);
         }
-
-        p {
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-            text-align: justify;
+        p { margin-bottom: 1rem; color: var(--text-primary); text-align: justify; }
+        ul, ol { margin-right: 1.5rem; margin-bottom: 1rem; color: var(--text-primary); }
+        li { margin-bottom: 0.5rem; }
+        .highlight { color: var(--accent); font-weight: 600; }
+        .app-box {
+            background: rgba(0,212,255,0.06);
+            border: 1px solid rgba(0,212,255,0.2);
+            border-radius: 16px; padding: 1.25rem; margin-top: 1rem;
         }
-
-        ul, ol {
-            margin-right: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .highlight {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
+        .app-box strong { color: var(--text-primary); }
         .contact-box {
-            background: rgba(0, 212, 255, 0.08);
-            border: 1px solid rgba(0, 212, 255, 0.35);
-            border-radius: 18px;
-            padding: 1.75rem;
-            margin-top: 2rem;
-            text-align: center;
+            background: rgba(0,212,255,0.08);
+            border: 1px solid rgba(0,212,255,0.35);
+            border-radius: 18px; padding: 1.75rem; margin-top: 2rem; text-align: center;
         }
-
-        .contact-box a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-box a:hover {
-            text-decoration: underline;
-        }
-
+        .contact-box a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .contact-box a:hover { text-decoration: underline; }
         footer {
-            background: rgba(15, 15, 30, 0.9);
+            background: rgba(15,15,30,0.9);
             backdrop-filter: blur(10px);
             border-top: 1px solid var(--glass-border);
-            padding: 2rem 2rem;
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+            padding: 2rem 2rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem;
         }
-
         @media (max-width: 768px) {
-            .container {
-                padding: 100px 1rem 2rem;
-            }
-
-            nav .container {
-                gap: 0.5rem;
-                flex-wrap: wrap;
-            }
-
-            nav .logo {
-                font-size: 1.1rem;
-            }
+            .container { padding: 100px 1rem 2rem; }
+            nav .container { gap: 0.5rem; flex-wrap: wrap; }
+            nav .logo { font-size: 1.1rem; }
         }
-
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-primary);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--glass-light);
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent);
-        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--glass-light); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
     </style>
 </head>
 <body>
     <nav>
         <div class="container">
-            <div class="logo">🎮 احزر الصورة</div>
+            <div class="logo">💎 تطبيقات HAMMOOD</div>
             <a href="index.html" class="back-link">← العودة للرئيسية</a>
         </div>
     </nav>
@@ -224,103 +126,110 @@
         <div class="last-updated">آخر تحديث: 31 أكتوبر 2026</div>
 
         <div class="policy-card">
-            <p><strong>اسم اللعبة:</strong> <span class="highlight">لعبة احزر الصورة</span></p>
-            <p><strong>المطور:</strong> <span class="highlight">HAMMOOD IBRAHIM KHALEEL</span></p>
+            <p><strong>اسم المطور:</strong> <span class="highlight">HAMMOOD IBRAHIM KHALEEL</span></p>
+            <p><strong>اسم حساب GitHub:</strong> <span class="highlight">hhmod021</span></p>
             <p><strong>البريد الإلكتروني للدعم:</strong> <span class="highlight">hhmod021@gmail.com</span></p>
+            <p><strong>الملف المخصص لهذه الصفحة:</strong> سياسة الخصوصية الخاصة بتطبيقات الموقع، مع توضيح سياسة كل تطبيق على حدة عند الحاجة.</p>
 
             <h2>1. مقدمة</h2>
-            <p>نحن نحرص على احترام خصوصية مستخدمي لعبة <span class="highlight">احزر الصورة</span>، ونسعى إلى حماية بياناتهم ومعلوماتهم الشخصية بأعلى مستوى من العناية والالتزام. توضح هذه السياسة كيفية جمعنا واستخدامنا وحفظنا للمعلومات المتعلقة بتجربة اللعب، مع التأكيد على أن اللعبة مصممة لتقديم تجربة ممتعة وآمنة دون تعريض خصوصية المستخدمين للخطر.</p>
-            <p>بممارسة المستخدم للعبة، يوافق على الشروط المذكورة في هذه السياسة. إذا لم يقبل بأي جزء منها، يرجى عدم استخدام اللعبة أو التفاعل معها.</p>
+            <p>هذه الصفحة مخصصة لعدة تطبيقات ومشاريع تم تطويرها وإضافتها إلى موقع <span class="highlight">HAMMOOD IBRAHIM</span>. ونحرص على احترام خصوصية المستخدمين والحفاظ على بياناتهم وبيئة الاستخدام الآمنة. إذا تم إضافة سياسة خصوصية خاصة بتطبيق جديد أو لعبة جديدة، فسيتم توضيح اسم التطبيق والمطور والبريد الإلكتروني والتواصل في هذا الملف بشكل واضح.</p>
+            <p>تُطبق هذه السياسة بشكل عام على التطبيقات والمشاريع المعروضة على الموقع، مع وجود تفاصيل إضافية خاصة لكل تطبيق إن لزم الأمر. وباستخدام أي تطبيق من التطبيقات المذكورة، يوافق المستخدم على أحكام هذه السياسة والبيانات المعلّنة المتعلقة به.</p>
         </div>
 
         <div class="policy-card">
-            <h2>2. ما لا نجمعه</h2>
-            <p>اللعبة لا تتطلب إنشاء حساب أو تسجيل دخول. لذلك نحن لا نقوم بجمع:</p>
+            <h2>2. السياسة العامة لجميع التطبيقات</h2>
+            <p>بشكل عام، لا نطلب من المستخدمين إنشاء حساب أو تسجيل دخول داخل معظم التطبيقات المعروضة في الموقع. لذلك:</p>
             <ul>
-                <li>الاسم الكامل أو اسم المستخدم الحقيقي.</li>
-                <li>رقم الهاتف أو عنوان البريد الإلكتروني من داخل اللعبة.</li>
-                <li>عنوان السكن أو الموقع الجغرافي الدقيق.</li>
-                <li>صور أو ملفات شخصية من المستخدمين.</li>
-                <li>معلومات الحسابات الاجتماعية أو بيانات الهوية.</li>
+                <li>لا نجمع اسم المستخدم الحقيقي أو اسم المستخدم الشخصي ولا رقم الهاتف.</li>
+                <li>لا نجمع العنوان أو الموقع الجغرافي الدقيق.</li>
+                <li>لا نجمع الصور الشخصية أو الصور من الجهاز.</li>
+                <li>لا نبيع أو نؤجر أو نشارك بيانات المستخدمين لأغراض تجارية دون موافقة صريحة.</li>
             </ul>
-            <p>كما أننا لا نقوم بإنشاء ملف شخصي للاعب داخل التطبيق، ولا نقوم بتخزين سجلات الألعاب الشخصية أو نتائج المستخدمين في خادمنا إلا إذا تم تحديد ذلك لاحقاً بوضوح في سياسة مستقلة ومحدثة.</p>
+            <p>يتم التعامل مع المعلومات التقنية اللازمة لتشغيل التطبيق فقط من أجل تحسين الأداء، ومعالجة الأعطال، أو عرض الإعلانات عند وجودها، ولا تُستخدم لتحديد هوية المستخدم بشكل مباشر.</p>
         </div>
 
         <div class="policy-card">
-            <h2>3. جمع البيانات التقنية</h2>
-            <p>قد يتم جمع بعض المعلومات التقنية الضرورية لتشغيل اللعبة بشكل صحيح وتحسين تجربة المستخدم، مثل:</p>
+            <h2>3. البيانات التقنية والإعلانات</h2>
+            <p>قد يتم جمع بيانات تقنية عامة مثل:</p>
             <ul>
                 <li>نوع الجهاز ونظام التشغيل.</li>
                 <li>لغة الجهاز.</li>
-                <li>معرّف الإعلان (Ad ID) عند استخدام الإعلانات.</li>
-                <li>معلومات فنية حول الأداء والأخطاء (في حال حدوث مشكلة فنية).</li>
+                <li>معرّف الإعلان (Ad ID) إذا كانت هناك إعلانات.</li>
+                <li>معلومات عن الأعطال أو الأداء عند حدوث خطأ فني.</li>
             </ul>
-            <p>هذه المعلومات تُستخدم فقط للأغراض الفنية والإحصائية وتحسين جودة اللعبة، وليست بيانات شخصية تعرّف المستخدم مباشرةً.</p>
+            <p>إذا احتوى التطبيق على إعلانات من <span class="highlight">Google AdMob</span> أو أي شبكة إعلانية موثوقة، فإن تلك الشبكات قد تستخدم بيانات فنية خاصة لإظهار إعلانات مناسبة وفق سياساتها الخاصة. لا نطلب منك إدخال أي بيانات شخصية في هذه العملية.</p>
         </div>
 
         <div class="policy-card">
-            <h2>4. الصور والموارد داخل اللعبة</h2>
-            <p>اللعبة قد تستخدم صوراً ورسومات وألغازاً يتم تحميلها من مصادر موثوقة مثل خدمات الاستضافة السحابية أو الروابط الخارجية ذات الصلة بتجربة اللعب. هذه الصور لا تُستخدم لتتبع المستخدم أو جمع بياناته الشخصية، بل تُستخدم فقط لعرض محتوى اللعبة بصورة صحيحة وسلسة.</p>
-            <p>لا نقوم برفع صور المستخدم أو محتوى الأجهزة الشخصية إلى الخوادم إلا إذا تم ذلك صراحةً من قبل المستخدم في حالة معينة ومدوّنة بوضوح في تحديثات لاحقة.</p>
-        </div>
-
-        <div class="policy-card">
-            <h2>5. الإعلانات</h2>
-            <p>قد تعرض اللعبة إعلانات من خلال شبكات إعلانية موثوقة مثل <span class="highlight">Google AdMob</span>، وذلك لتغطية تكاليف التطوير وتقديم اللعبة مجاناً. قد تستخدم هذه الشبكات معلومات تقنية لتخصيص الإعلانات المعروضة، مثل:</p>
+            <h2>4. السجل الرسمي للتطبيقات المضافة</h2>
+            <p>كل تطبيق جديد يتم إضافته إلى الموقع يذكر في سياسة الخصوصية باسم التطبيق، اسم المطور ورقم التواصل الخاص به. هذا يساعد المستخدم على معرفة التطبيق المحدد الذي يهمه، دون الخلط بين التطبيقات الموجودة في الموقع.</p>
+            <p>وفي كل مرة يتم إضافة تطبيق جديد، يجب أن تتوفر المعلومات التالية:</p>
             <ul>
-                <li>نوع الجهاز.</li>
-                <li>لغة الجهاز.</li>
-                <li>معرّف الإعلان (Ad ID).</li>
-                <li>بيانات إعلانية عامة تخص سلوك المستخدم داخل التطبيق أو عبر النظام.</li>
+                <li>اسم التطبيق أو اللعبة.</li>
+                <li>اسم المطور أو اسم الشركة.</li>
+                <li>اسم حساب GitHub أو حساب المطور.</li>
+                <li>البريد الإلكتروني للتواصل أو وسيلة الدعم.</li>
+                <li>نوع التطبيق (لعبة، مشغل موسيقى، أداة، تطبيق شخصية، إلخ).</li>
             </ul>
-            <p>قد تخضع هذه البيانات لسياسات شبكة الإعلانات المستخدمة، ويُرجى مراجعة سياسة الخصوصية الخاصة بـ Google AdMob أو مزود الإعلانات المعتمد في كل وقت لمعرفة التفاصيل الدقيقة.</p>
         </div>
 
         <div class="policy-card">
-            <h2>6. استخدام البيانات</h2>
-            <p>نستخدم البيانات المجمعة فقط للأغراض التالية:</p>
-            <ul>
-                <li>تحسين أداء اللعبة واستقرارها.</li>
-                <li>تحديد المشاكل التقنية أو الأعطال.</li>
-                <li>تطوير محتوى اللعبة وتصميم التجربة.</li>
-                <li>عرض الإعلانات المناسبة والتقليل من الإعلانات غير ذات الصلة.</li>
-            </ul>
-            <p>لا نبيع أو نؤجر أو نشارك بيانات المستخدم مع أطراف خارجية لأغراض تجارية دون موافقة صريحة، إلا إذا كان ذلك مطلوباً بموجب القانون أو لتمكين خدمات إعلانية موثوقة.</p>
+            <h2>5. سياسة التطبيق: مشغل الموسيقى MP3</h2>
+            <div class="app-box">
+                <p><strong>اسم التطبيق:</strong> MP3 Music Player / مشغل الموسيقى MP3</p>
+                <p><strong>اسم المطور:</strong> HAMMOOD IBRAHIM KHALEEL</p>
+                <p><strong>اسم حساب GitHub:</strong> hhmod021</p>
+                <p><strong>التواصل:</strong> hhmod021@gmail.com</p>
+            </div>
+            <p>هذا التطبيق يعمل بشكل أساسي <span class="highlight">offline</span> و<span class="highlight">local</span> على الجهاز. لا يطلب حساباً، ولا يقوم بجمع أسماء أو أرقام أو بيانات شخصية. يتم استخدام صلاحيات الوصول إلى الملفات الصوتية أو التخزين المحلي فقط لقراءة وتشغيل الملفات الموسيقية الموجودة على جهاز المستخدم.</p>
+            <p>لا يُحمل التطبيق ملفات الموسيقى إلى السيرفرات، ولا يتم مشاركة محتوى المستخدم مع أي طرف خارجي، ولا يتم تخزين قائمة التشغيل أو الملفات الشخصية خارج الجهاز.</p>
         </div>
 
         <div class="policy-card">
-            <h2>7. التخزين والحماية</h2>
-            <p>نلتزم بحماية المعلومات التي قد نجمعها من خلال تطبيقاتنا باستخدام وسائل أمنية مناسبة، بما في ذلك:</p>
-            <ul>
-                <li>تقييد الوصول إلى البيانات.</li>
-                <li>استخدام بيئات آمنة للتخزين عند الحاجة.</li>
-                <li>إجراء مراجعات مستمرة للتحقق من سلامة إجراءات الحماية.</li>
-            </ul>
-            <p>ومع ذلك، لا يمكن ضمان الأمان الكامل للبيانات في الأنظمة الرقمية بشكل مطلق، لذلك نعمل على اتخاذ الخطوات المعقولة لضمان حماية المستخدم.</p>
+            <h2>6. سياسة التطبيق: زخرفة الفخامة الملكية</h2>
+            <div class="app-box">
+                <p><strong>اسم التطبيق:</strong> زخرفة الفخامة الملكية</p>
+                <p><strong>اسم المطور:</strong> HAMMOOD IBRAHIM KHALEEL</p>
+                <p><strong>اسم حساب GitHub:</strong> hhmod021</p>
+                <p><strong>التواصل:</strong> hhmod021@gmail.com</p>
+            </div>
+            <p>هذا التطبيق يعتمد على إنشاء أنماط زخرفة، أسماء، وألقاب، وأحياناً إنشاء كلمات مرور معقدة أو محفوظات داخل التطبيق. لا نطلب من المستخدم إدخال أسماءه الحقيقية أو رقم هاتفه أو بيانات شخصية من أي نوع. لا يتم جمع بيانات المستخدم داخل خادم المطور إلا إذا تم تحديد ذلك بوضوح في تحديث منفصل لاحقاً.</p>
+            <p>تُخزن البيانات المحلية إن وجدت فقط داخل الجهاز المستخدم، ولا يتم نقلها إلى أي جهة خارجية إلا إذا كان التطبيق يحتوي على إعلانات أو خدمات خارجية تم توضيحها في سياسة كل تطبيق مستقلة.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2>7. سياسة التطبيق: لعبة احزر الصورة</h2>
+            <div class="app-box">
+                <p><strong>اسم اللعبة:</strong> لعبة احزر الصورة</p>
+                <p><strong>اسم المطور:</strong> HAMMOOD IBRAHIM KHALEEL</p>
+                <p><strong>اسم حساب GitHub:</strong> hhmod021</p>
+                <p><strong>التواصل:</strong> hhmod021@gmail.com</p>
+            </div>
+            <p>اللعبة لا تتطلب إنشاء حساب أو تسجيل دخول، ولا نطلب من المستخدم إدخال اسمه الحقيقي أو رقم هاتفه أو بيانات شخصية. لا نقوم بإنشاء ملف شخصي للاعب داخل اللعبة، ولا نطلب الصور أو الروابط الاجتماعية أو أي معلومات تعريفية.</p>
+            <p>قد تستخدم اللعبة صوراً ورسومات وألغازاً يتم تحميلها من مصادر موثوقة ومناسبة لتجربة اللعب، مع مراعاة أن هذه الصور لا تُستخدم لتتبع المستخدم أو جمع بياناته الشخصية. كما قد تظهر إعلانات من خلال شبكات موثوقة مثل Google AdMob، وقد تُجمع بيانات تقنية عامة مثل نوع الجهاز، لغة الجهاز، ومعرّف الإعلان (Ad ID) لتخصيص الإعلانات وفق سياسات المورد الإعلاني.</p>
+            <p>لا نقوم ببيع أو تأجير أو مشاركة بيانات المستخدم بشكل تجاري، إلا إذا كان ذلك مطلوباً قانونياً أو من خلال خدمات إعلانية معتمدة ومحددة في السياسات الرسمية للجهات المعنية.</p>
         </div>
 
         <div class="policy-card">
             <h2>8. خصوصية الأطفال</h2>
-            <p>اللعبة مصممة لتناسب جميع الفئات العمرية، وهي مناسبة للاستخدام العائلي بشكل عام. نحن لا نقوم بجمع بيانات شخصية أو حساسة من الأطفال بشكل متعمد، ولا نطلب منهم تقديم معلومات تعريف شخصية داخل اللعبة.</p>
-            <p>إذا تم اكتشاف أي جمع غير مقصود لبيانات طفل، سنعمل على حذفها فوراً عند التحقق من الأمر.</p>
+            <p>الألعاب والتطبيقات المعروضة في الموقع مصممة بشكل عام لعامة المستخدمين بمن فيهم الأطفال، ونحن لا نجمع بشكل متعمد أي بيانات شخصية من الأطفال. إذا تم اكتشاف أي جمع غير مقصود لبيانات تخص طفل، فسيتم حذفها فوراً عند التحقق من الأمر.</p>
         </div>
 
         <div class="policy-card">
-            <h2>9. التغييرات في سياسة الخصوصية</h2>
-            <p>قد نعدل هذه السياسة من وقت لآخر لتحديثها بما يتوافق مع التطورات في اللعبة أو الخدمات المستخدمة أو اللوائح القانونية. أي تحديث جوهري سيتم الإعلان عنه من خلال هذه الصفحة أو عبر الارتباط المرتبط بها.</p>
-            <p>نوصي المستخدم بمراجعة هذه السياسة بشكل دوري للاستمرار على اطلاع دائم بأي تعديل جديد.</p>
+            <h2>9. التحديثات والتغييرات</h2>
+            <p>قد نعدل هذه السياسة أو سياسة أي تطبيق على حدة من وقت لآخر لتعكس تغييرات في الوظائف أو الإعلانات أو ��للوائح القانونية. سيتم تحديث تاريخ آخر تعديل بشكل واضح في هذه الصفحة; كما سيتم توضيح اسم التطبيق الجديد أو المحدث عند الحاجة.</p>
         </div>
 
-        <div class="policy-card">
+        <div class="contact-box">
             <h2>10. التواصل</h2>
-            <p>إذا كان لديك أي سؤال أو استفسار أو ملاحظة بخصوص سياسة الخصوصية أو استخدام بياناتك داخل اللعبة، يمكنك التواصل معنا عبر البريد الإلكتروني التالي:</p>
-            <p><strong>البريد الإلكتروني:</strong> <a href="mailto:hhmod021@gmail.com" class="highlight">hhmod021@gmail.com</a></p>
-            <p>نحن نقدّر تواصلك معنا وسنحاول الرد عليك في أقرب وقت ممكن.</p>
+            <p>إذا كان لديك أي سؤال أو استفسار أو ملاحظة بشأن سياسة الخصوصية لأي تطبيق من التطبيقات المذكورة، يمكنك التواصل معنا عبر:</p>
+            <p><strong>البريد الإلكتروني:</strong> <a href="mailto:hhmod021@gmail.com">hhmod021@gmail.com</a></p>
+            <p><strong>اسم حساب المطور:</strong> <span class="highlight">hhmod021</span></p>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 لعبة احزر الصورة. جميع الحقوق محفوظة.</p>
+        <p>© 2026 تطبيقات HAMMOOD IBRAHIM KHALEEL. جميع الحقوق محفوظة.</p>
     </footer>
 </body>
 </html>
